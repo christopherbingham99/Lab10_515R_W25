@@ -16,11 +16,11 @@ do
 
   NEW1=$(md5sum $FILE1 | cut -d ' ' -f 1)
   if [ $HASH1 != $NEW1 ]; then
-    echo $FILE has been altered!
-    echo i >> log_integrity.log
+    echo echo "$FILE1 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
+    echo "$FILE1 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
     #also put in a log (maybe add timestamp)
   fi
-  echo $i >> log_integrity.log
+  
   sleep 5
 done
 
