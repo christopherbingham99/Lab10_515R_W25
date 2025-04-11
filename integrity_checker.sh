@@ -20,6 +20,7 @@ do
     #also put in a log
   fi
 
+  sleep 5
 done
 
 
