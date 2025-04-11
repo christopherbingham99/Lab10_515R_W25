@@ -20,7 +20,7 @@ do
     echo i >> log_integrity.log
     #also put in a log (maybe add timestamp)
   fi
-  echo i >> log_integrity.log
+  echo $i >> log_integrity.log
   sleep 5
 done
 
