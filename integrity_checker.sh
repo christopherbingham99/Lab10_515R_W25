@@ -12,7 +12,7 @@ echo done collecting hashes.
 i=0;
 for i in {1..5};
 do
-  echo $if
+  echo $i
 done
 
 
