@@ -11,7 +11,7 @@ echo done collecting hashes.
 #loop
 echo scanning...
 
-NEW1=HASH1=$(md5sum $FILE1 | cut -d ' ' -f 1)
+NEW1=$(md5sum $FILE1 | cut -d ' ' -f 1)
 if [ $HASH1 != $NEW1 ]; then
   echo $FILE has been altered!
   #also put in a log
