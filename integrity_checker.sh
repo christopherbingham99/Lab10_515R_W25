@@ -10,6 +10,6 @@ echo done collecting hashes.
 
 echo scanning...
 
-if [ $FILE1 == $FILE1 ]; then
+if [ $FILE1 == $HASH1 ]; then
   echo lol
 fi
