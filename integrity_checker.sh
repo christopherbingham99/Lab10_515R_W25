@@ -39,6 +39,36 @@ do
     echo echo "$FILE1 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
     echo "$FILE1 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
   fi
+
+    NEW2=$(md5sum $FILE2 | cut -d ' ' -f 1) #take the hash again
+  if [ $HASH2 != $NEW2 ]; then #check if new hash is different
+    echo echo "$FILE2 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
+    echo "$FILE2 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
+  fi
+
+    NEW3=$(md5sum $FILE3 | cut -d ' ' -f 1) #take the hash again
+  if [ $HASH3 != $NEW3 ]; then #check if new hash is different
+    echo echo "$FILE3 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
+    echo "$FILE3 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
+  fi
+
+    NEW4=$(md5sum $FILE4 | cut -d ' ' -f 1) #take the hash again
+  if [ $HASH4 != $NEW4 ]; then #check if new hash is different
+    echo echo "$FILE4 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
+    echo "$FILE4 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
+  fi
+
+    NEW5=$(md5sum $FILE5 | cut -d ' ' -f 1) #take the hash again
+  if [ $HASH5 != $NEW5 ]; then #check if new hash is different
+    echo echo "$FILE5 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
+    echo "$FILE5 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
+  fi
+
+    NEW6=$(md5sum $FILE6 | cut -d ' ' -f 1) #take the hash again
+  if [ $HASH6 != $NEW6 ]; then #check if new hash is different
+    echo echo "$FILE6 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" #warning with date and time in terminal
+    echo "$FILE6 has been altered! $(date +"%Y-%m-%d %H:%M:%S")" >> log_integrity.log #warning added to log with date and time (appends) (creates file if not there)
+  fi
   
   sleep 5
 done
