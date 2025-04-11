@@ -9,6 +9,14 @@ echo collected $FILE1 $HASH1
 echo done collecting hashes.
 
 #loop
+i=0;
+for i in {1..5};
+do
+  echo $if
+done
+
+
+
 echo scanning...
 
 NEW1=$(md5sum $FILE1 | cut -d ' ' -f 1)
