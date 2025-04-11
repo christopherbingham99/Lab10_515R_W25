@@ -10,17 +10,17 @@ echo done collecting hashes.
 
 #loop
 i=0;
-for i in {1..5};
+for i in {1..500};
 do
-  echo $i
+  echo scanning...
+
+  NEW1=$(md5sum $FILE1 | cut -d ' ' -f 1)
+  if [ $HASH1 != $NEW1 ]; then
+    echo $FILE has been altered!
+    #also put in a log
+  fi
+
 done
 
 
 
-echo scanning...
-
-NEW1=$(md5sum $FILE1 | cut -d ' ' -f 1)
-if [ $HASH1 != $NEW1 ]; then
-  echo $FILE has been altered!
-  #also put in a log
-fi
