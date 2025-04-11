@@ -17,7 +17,7 @@ do
   NEW1=$(md5sum $FILE1 | cut -d ' ' -f 1)
   if [ $HASH1 != $NEW1 ]; then
     echo $FILE has been altered!
-    echo i >> integrity.log
+    echo i >> log_integrity.log
     #also put in a log (maybe add timestamp)
   fi
 
